@@ -1,0 +1,5 @@
+module.exports = {
+  email: 'egghead account email',
+  password: 'egghead password',
+}
+
