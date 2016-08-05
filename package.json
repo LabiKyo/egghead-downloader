@@ -1,7 +1,7 @@
 {
   "name": "egghead-downloader",
   "version": "0.0.1",
-  "description": "",
+  "description": "Tool to download videos from egghead.io using nightmare.",
   "main": "index.js",
   "dependencies": {
     "nightmare": "^2.6.0"
@@ -10,6 +10,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "engines": {
+    "node": ">=6.0.0"
+  },
   "author": "Labi Kyo <labikyo@gmail.com>",
+  "maintainers": [
+    {
+      "name": "Labi Kyo",
+      "email": "labikyo@gmail.com"
+    }
+  ],
   "license": "MIT"
 }
