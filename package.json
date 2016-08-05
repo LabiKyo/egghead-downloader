@@ -1,0 +1,15 @@
+{
+  "name": "egghead-downloader",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "nightmare": "^2.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Labi Kyo <labikyo@gmail.com>",
+  "license": "MIT"
+}
