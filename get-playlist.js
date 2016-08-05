@@ -3,8 +3,6 @@ const Nightmare = require('nightmare')
 
 const consts = require('./consts.js')
 
-const cookies = JSON.parse(fs.readFileSync('./cookies.json', { encoding: 'utf-8' }))
-
 const target = '/playlists/node-web-scraping-with-javascript'
 
 const nightmare = Nightmare(consts.nightmareOptions)
@@ -12,7 +10,6 @@ const nightmare = Nightmare(consts.nightmareOptions)
 nightmare
   .goto(consts.domain + target)
   .wait('h4 a')
-  .cookies.set(cookies)
   .evaluate(() => {
     const playlist = Array
       .from(document.querySelectorAll('h4 a'))
