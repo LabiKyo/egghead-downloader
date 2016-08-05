@@ -5,12 +5,7 @@ const getConfig = require('./utils.js').getConfig
 const consts = require('./consts.js')
 const config = getConfig()
 
-Nightmare({
-  show: true,
-  pollInterval: 100,
-  waitTimeout: 5000,
-  gotoTimeout: 5000,
-})
+Nightmare(consts.nightmareOptions)
   .goto(consts.domain + consts.signIn)
   .insert('#user_email', config.email)
   .insert('#user_password', config.password)
@@ -19,5 +14,5 @@ Nightmare({
   .cookies.get()
   .end()
   .then(cookies => {
-    fs.writeFileSync('./cookies.json', JSON.stringify(cookies), { encoding: 'utf-8' })
+    fs.writeFileSync('./cookies.json', JSON.stringify(cookies, null, '\t'), { encoding: 'utf-8' })
   })
